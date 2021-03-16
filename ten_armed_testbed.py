@@ -119,7 +119,7 @@ def figure_2_1():
     plt.violinplot(dataset=np.random.randn(200, 10) + np.random.randn(10))
     plt.xlabel("Action")
     plt.ylabel("Reward distribution")
-    plt.savefig('C:/Users/MUSTAKIM/OneDrive/Documents/Python Scripts/images/figure_2_1.png')
+    plt.savefig('images/figure_2_1.png')
     plt.close()
 
 
@@ -144,7 +144,7 @@ def figure_2_2(runs=2000, time=1000):
     plt.ylabel('% optimal action')
     plt.legend()
 
-    plt.savefig('C:/Users/MUSTAKIM/OneDrive/Documents/Python Scripts/images/figure_2_2.png')
+    plt.savefig('images/figure_2_2.png')
     plt.close()
 
 
@@ -160,7 +160,7 @@ def figure_2_3(runs=2000, time=1000):
     plt.ylabel('% optimal action')
     plt.legend()
 
-    plt.savefig('C:/Users/MUSTAKIM/OneDrive/Documents/Python Scripts/images/figure_2_3.png')
+    plt.savefig('images/figure_2_3.png')
     plt.close()
 
 
@@ -176,7 +176,7 @@ def figure_2_4(runs=2000, time=1000):
     plt.ylabel('Average reward')
     plt.legend()
 
-    plt.savefig('C:/Users/MUSTAKIM/OneDrive/Documents/Python Scripts/images/figure_2_4.png')
+    plt.savefig('images/figure_2_4.png')
     plt.close()
 
 
@@ -198,13 +198,13 @@ def figure_2_5(runs=2000, time=1000):
     plt.ylabel('% Optimal action')
     plt.legend()
 
-    plt.savefig('C:/Users/MUSTAKIM/OneDrive/Documents/Python Scripts/images/figure_2_5.png')
+    plt.savefig('images/figure_2_5.png')
     plt.close()
 
 
 def figure_2_6(runs=2000, time=1000):
     labels = ['epsilon-greedy', 'gradient bandit',
-              'UCB', 'optimistic initialization']
+              'UCB', 'greedy with optimistic initialization, a=0.1']
     generators = [lambda epsilon: Bandit(epsilon=epsilon, sample_averages=True),
                   lambda alpha: Bandit(gradient=True, step_size=alpha, gradient_baseline=True),
                   lambda coef: Bandit(epsilon=0, UCB_param=coef, sample_averages=True),
@@ -231,7 +231,7 @@ def figure_2_6(runs=2000, time=1000):
     plt.ylabel('Average reward')
     plt.legend()
 
-    plt.savefig('C:/Users/MUSTAKIM/OneDrive/Documents/Python Scripts/images/figure_2_6.png')
+    plt.savefig('images/figure_2_6.png')
     plt.close()
 
 
