@@ -66,7 +66,7 @@ def draw_image(image):
 def compute_state_value(in_place=True, discount=1.0):
     new_state_values = np.zeros((WORLD_SIZE, WORLD_SIZE))
     iteration = 0
-    while iteration<20:
+    while True:
         if in_place:
             state_values = new_state_values
         else:
@@ -99,7 +99,7 @@ def figure_4_1():
     print('In-place: {} iterations'.format(asycn_iteration))
     print('Synchronous: {} iterations'.format(sync_iteration))
 
-    plt.savefig('images/figure_4_1_20.png')
+    plt.savefig('images/figure_4_1_max.png')
     plt.close()
 
 
