@@ -17,3 +17,14 @@ def plot(scores, mean_scores):
     plt.text(len(mean_scores)-1, mean_scores[-1], str(mean_scores[-1]))
     plt.show(block=False)
     plt.pause(.1)
+
+    num = [int(item) for item in scores]
+    i=0
+    for n in num:
+        if (n > i):
+            plt.savefig('Result/Figure'+str(i)+'.png')
+            i +=1
+
+    
+
+    
