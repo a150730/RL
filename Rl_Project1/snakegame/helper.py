@@ -18,12 +18,11 @@ def plot(scores, mean_scores):
     plt.show(block=False)
     plt.pause(.1)
 
-    num = [int(item) for item in scores]
-    i=0
-    for n in num:
-        if (n > i):
-            plt.savefig('Result/Figure'+str(i)+'.png')
-            i +=1
+       
+    
+    
+def savePlot(gameNum):
+    plt.savefig('Result/Figure'+str(gameNum)+'.png')
 
     
 
