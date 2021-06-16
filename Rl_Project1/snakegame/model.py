@@ -4,7 +4,8 @@ import torch.optim as optim
 import torch.nn.functional as F
 import os
 
-class Linear_QNet(nn.Module):
+class QNet(nn.Module):
+    # This is just simple feed forward neural net model
     def __init__(self, input_size, hidden_size, output_size):
         super().__init__()
         self.linear1 = nn.Linear(input_size, hidden_size)
