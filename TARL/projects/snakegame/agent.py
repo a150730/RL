@@ -10,7 +10,7 @@ from helper import plot, savePlot
 MAX_MEMORY = 100_000
 BATCH_SIZE = 1000
 
-LR = 0.005
+LR = 0.001
 
 class Agent:
 
@@ -138,6 +138,7 @@ def train():
                 agent.model.save()
 
             print('Games', agent.n_games, 'Score', score, 'Record:', record)
+                       
 
             plot_scores.append(score)
             total_score += score
