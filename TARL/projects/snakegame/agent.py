@@ -109,6 +109,7 @@ def train():
     record = 0
     agent = Agent()
     game = SnakeGame()
+    
     while True:
         # get old state
         state_old = agent.get_state(game)
