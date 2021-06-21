@@ -19,14 +19,14 @@ Point = namedtuple('Point', 'x, y')
 
 # Interface setting 
 WHITE = (255, 255, 255)
-RED = (200,0,0)
-BLUE1 = (0, 0, 255)
-BLUE2 = (0, 100, 255)
 BLACK = (0,0,0)
+RED = (200,0,0)
+BLUE1 = (102, 255, 255)
+BLUE2 = (0, 0, 153)
 
 #snake feature setting 
 BLOCK_SIZE = 20
-SPEED = 40
+SPEED = 100
 
 class SnakeGame:
 

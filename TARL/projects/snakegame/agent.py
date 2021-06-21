@@ -109,7 +109,6 @@ def train():
     record = 0
     agent = Agent()
     game = SnakeGame()
-    start = time.time()
     while True:
         # get old state
         state_old = agent.get_state(game)
@@ -132,7 +131,7 @@ def train():
             game.reset()
             agent.n_games += 1
             agent.train_long_memory()
-            stop = time.time()
+            
 
             if score > record:
                 record = score
@@ -141,7 +140,7 @@ def train():
                 agent.model.save()
 
             print('Games', agent.n_games, 'Score', score, 'Record:', record)
-            print(" time now:"+ str(stop-start))
+            # print(" time now:"+ str(stop-start))
                        
 
             plot_scores.append(score)
